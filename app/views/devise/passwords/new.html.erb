@@ -1,0 +1,18 @@
+<h2 class="subheader">Forgot Your Password</h2>
+<hr />
+
+<%= simple_form_for(resource, :as => resource_name, :url => password_path(resource_name), :html => { :method => :post }) do |f| %>
+<%= f.error_notification %>
+
+<div class="form-inputs">
+	<%= f.input :email, :required => true, :autofocus => true %>
+</div>
+
+<div class="row">
+	<div class="small-11 small-centered large-3 large-offset-3 columns">
+
+		<%= f.button :submit, "Send me password reset instructions" %>
+	</div>
+</div>
+
+<% end %>

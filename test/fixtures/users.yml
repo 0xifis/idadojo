@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  school: MyString
+  handphone: 1
+  team_id: 1
+
+two:
+  name: MyString
+  school: MyString
+  handphone: 1
+  team_id: 1

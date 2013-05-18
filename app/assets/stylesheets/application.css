@@ -1,0 +1,51 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require foundation_and_overrides
+ *= require_self
+*/
+
+/*General*/
+
+hr{
+	margin-top: -15px;
+}
+
+#container {
+	padding: 0 10px;
+}
+
+
+
+
+/*Form*/
+
+@media all and (min-width: 768px){
+.btn-offset{
+	margin-left: 8px;
+}
+}
+
+.input > .columns {
+	padding-left: 0;
+	padding-right: 0.5375em;
+}
+
+
+/*Top Nav*/
+
+.top-bar-section ul li > a {
+  font-weight: normal;
+}
+
+.top-bar .name h1 a {
+  font-weight: normal;
+}

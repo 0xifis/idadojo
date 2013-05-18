@@ -1,0 +1,39 @@
+@import 'foundation_and_overrides';
+
+
+/*General*/
+
+hr{
+	margin-top: -15px;
+}
+
+#container {
+	padding: 0 10px;
+}
+
+
+
+
+/*Form*/
+
+@media all and (min-width: 768px){
+.btn-offset{
+	margin-left: 8px;
+}
+}
+
+.input > .columns {
+	padding-left: 0;
+	padding-right: 0.5375em;
+}
+
+
+/*Top Nav*/
+
+.top-bar-section ul li > a {
+  font-weight: normal;
+}
+
+.top-bar .name h1 a {
+  font-weight: normal;
+}

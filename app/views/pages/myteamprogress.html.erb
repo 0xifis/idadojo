@@ -1,0 +1,50 @@
+<h2 class="subheader"><%= @myteam.name + "'s Progress"%></h2>
+<hr />
+
+<div class="progress progress-striped active">
+  <div class="bar" style="width: <%=@width%>%;"></div>
+</div>
+
+
+<h3 class="subheader">Completed Checkpoints (<%= @myteam.checkpoints.count.to_s + "/" + Checkpoint.count.to_s %>)</h3>
+<hr />
+<div class="hide-for-small">
+	<table style="width:100%;">
+		<thead>
+			<tr>
+				<th class="large-3 columns">Name</th>
+				<th class="large-3 columns">Location</th>
+				<th class="large-3 columns">Code</th>
+				<th class="large-3 columns">Points</th>
+			</tr>
+		</thead>
+		<tbody>
+			<% @myteam.checkpoints.order("name").each do|t| %>
+			<tr>
+				<td class="large-3 columns"><%= t.name %></td>
+				<td class="large-3 columns"><%= t.location %></td>
+				<td class="large-3 columns"><%= t.route %></td>
+				<td class="large-3 columns"><%= t.points %></td>
+			</tr>
+			<% end %>
+		</tbody>
+	</table>
+</div>
+
+<div class="hide-for-medium-up">
+	<div class="section-container accordion" data-section="accordion">
+		<% @myteam.checkpoints.order("name").each do|t| %>
+		<section>
+			<p class="title" data-section-title><a href="#"><%= t.name %></a></p>
+			<div class="content" data-section-content>
+				<span><b>Location</b></span>
+				<p><%= t.location %></p>
+				<span><b>Code</b></span>
+				<p><%= t.route %></p>
+				<span><b>Points</b></span>
+				<p><%= t.points %></p>
+			</div>
+		</section>
+		<% end %>
+	</div>
+</div>

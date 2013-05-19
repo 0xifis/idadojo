@@ -13,7 +13,7 @@ SimpleForm.setup do |config|
     b.wrapper :tag => 'div', :class => 'small-12 large-9 columns' do |ba|
         ba.use :input
     end
-    b.use :error, :wrap_with => { :tag => :small }
+    b.use :error, :wrap_with => { :tag => :p }
 
     # Uncomment the following line to enable hints. The line is commented out by default since Foundation
     # does't provide styles for hints. You will need to provide your own CSS styles for hints.

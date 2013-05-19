@@ -1,0 +1,14 @@
+<h2 class="subheader">Leaderboard</h2>
+<hr />
+
+<% Team.all.each do |t| %>
+	<div class="row hide-for-medium-up"><%= t.name %></div>
+	<div class="row">
+		<div class="large-2 hide-for-small columns"><p style="text-align:right; line-height: 45px; font-size: 25px;"><%= t.name %></p></div>
+		<div class="small-12 large-10 columns">
+			<div class="progress progress-striped active">
+			  <div class="bar" style="width: <%= progress_width(t) %>%;"></div>
+			</div>
+		</div>
+	</div>
+<% end %>

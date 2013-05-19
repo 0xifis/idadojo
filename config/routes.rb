@@ -9,7 +9,13 @@ Ninja::Application.routes.draw do
   
   get "pages/myteam"
   
+  get "pages/myteamprogress"
+  
   get "pages/checkpoints"
+  
+  get "pages/leaderboard"
+  
+  match 'code/*code' => 'pages#checkcode'
 
   devise_for :users
   ActiveAdmin.routes(self)

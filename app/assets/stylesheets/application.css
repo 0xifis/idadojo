@@ -13,6 +13,12 @@ hr{
 	padding: 0 10px;
 }
 
+.alert-box .alert{
+	margin-bottom: 35px;
+	margin-left: 15px;
+	margin-right:15px;
+}
+
 
 
 
@@ -54,7 +60,6 @@ hr{
 
 .input > div {
 	z-index:10;
-	
 }
 
 

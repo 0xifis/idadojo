@@ -9,7 +9,7 @@
 	<%= f.input :email, :required => true, type: :email, :placeholder => "Email" %>
 	<%= f.input :school, :required => true, :placeholder => "School" %>
 	<%= f.input :handphone, :required => true, type: :number, :placeholder => "Handphone"%>
-	<%= f.input :team_id, :required => true, type: :number, :placeholder => "Team ID"%>
+	<%= f.input :team_id, :required => true, type: :number, :placeholder => "Team ID (1-#{Team.count})"%>
 	<%= f.input :password, :required => true, :placeholder => "Password"%>
 	<%= f.input :password_confirmation, :required => true, :placeholder => "Confirm Password" %>
 </div>

@@ -12,7 +12,7 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require ./foundation
+//= require ./foundation	
 //= require_directory ./plugins
 //= require_self
 

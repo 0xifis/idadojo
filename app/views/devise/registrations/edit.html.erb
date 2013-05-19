@@ -6,12 +6,13 @@
 	<%= f.error_notification %>
 
 	<div class="form-inputs">
-		<%= f.input :name, :required => true, :autofocus => true%>
-		<%= f.input :email, :required => true,  type: :email %>
-		<%= f.input :school, :required => true %>
-		<%= f.input :handphone, :required => true, type: :number%>
-		<%= f.input :password, :autocomplete => "off", :placeholder => "leave it blank if you don't want to change it", :required => false %>
-		<%= f.input :password_confirmation, :required => false %>
+		<%= f.input :name, :required => true, :autofocus => true, :placeholder => "Name"%>
+		<%= f.input :email, :required => true,  type: :email, :placeholder => "Email" %>
+		<%= f.input :school, :required => true, :placeholder => "School" %>
+		<%= f.input :handphone, :required => true, type: :number, :placeholder => "Handphone"%>
+		<%= f.input :team_id, :required => true, type: :number, :placeholder => "Team ID"%>
+		<%= f.input :password, :autocomplete => "off", :placeholder => "Password: leave it blank if you don't want to change it", :required => false %>
+		<%= f.input :password_confirmation, :required => false , :placeholder => "Confirm Password"%>
 		<%= f.input :current_password, :placeholder => "we need your current password to confirm your changes", :required => true %>
 	</div>
 

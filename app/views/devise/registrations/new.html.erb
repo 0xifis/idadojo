@@ -5,17 +5,17 @@
 <%= f.error_notification %>
 
 <div class="form-inputs">
-	<%= f.input :name, :required => true %>
-	<%= f.input :email, :required => true, :autofocus => true, type: :email %>
-	<%= f.input :school, :required => true %>
-	<%= f.input :handphone, :required => true, type: :number%>
-	<%= f.input :password, :required => true%>
-	<%= f.input :password_confirmation, :required => true %>
+	<%= f.input :name, :required => true,  :autofocus => true, :placeholder => "Name"%>
+	<%= f.input :email, :required => true, type: :email, :placeholder => "Email" %>
+	<%= f.input :school, :required => true, :placeholder => "School" %>
+	<%= f.input :handphone, :required => true, type: :number, :placeholder => "Handphone"%>
+	<%= f.input :team_id, :required => true, type: :number, :placeholder => "Team ID"%>
+	<%= f.input :password, :required => true, :placeholder => "Password"%>
+	<%= f.input :password_confirmation, :required => true, :placeholder => "Confirm Password" %>
 </div>
 
 <div class="row">
-	<div class="small-11 small-centered large-3 large-offset-3 columns">
-
+	<div class="small-11 small-centered large-3 large-offset-3 columns form-offset">
 		<%= f.button :submit, "Sign Up", class: "expand" %>
 	</div>
 

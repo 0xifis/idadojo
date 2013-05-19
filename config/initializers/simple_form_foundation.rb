@@ -7,10 +7,10 @@ SimpleForm.setup do |config|
     b.optional :pattern
     b.optional :min_max
     b.optional :readonly
-    b.wrapper :tag => 'div', :class => 'small-3 columns' do |ba|
+    b.wrapper :tag => 'div', :class => 'hide-for-small large-3 columns' do |ba|
         ba.use :label
     end
-    b.wrapper :tag => 'div', :class => 'small-9 columns' do |ba|
+    b.wrapper :tag => 'div', :class => 'small-12 large-9 columns' do |ba|
         ba.use :input
     end
     b.use :error, :wrap_with => { :tag => :small }

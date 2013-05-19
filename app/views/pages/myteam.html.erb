@@ -1,0 +1,43 @@
+<h2 class="subheader"><%= @myteam.name %></h2>
+<hr />
+
+<div class="hide-for-small">
+	<table style="width:100%;">
+		<thead>
+			<tr>
+				<th class="large-3 columns">Name</th>
+				<th class="large-3 columns">Email</th>
+				<th class="large-3 columns">School</th>
+				<th class="large-3 columns">Handphone</th>
+			</tr>
+		</thead>
+		<tbody>
+			<% @myteam.users.order("name").each do|t| %>
+			<tr>
+				<td class="large-3 columns"><%= t.name %></td>
+				<td class="large-3 columns"><%= t.email %></td>
+				<td class="large-3 columns"><%= t.school %></td>
+				<td class="large-3 columns"><%= t.handphone %></td>
+			</tr>
+			<% end %>
+		</tbody>
+	</table>
+</div>
+
+<div class="hide-for-medium-up">
+	<div class="section-container accordion" data-section="accordion">
+		<% @myteam.users.order("name").each do|t| %>
+		<section>
+			<p class="title" data-section-title><a href="#"><%= t.name %></a></p>
+			<div class="content" data-section-content>
+				<span><b>Email</b></span>
+				<p><%= t.email %></p>
+				<span><b>Handphone</b></span>
+				<p><%= t.handphone %></p>
+				<span><b>School</b></span>
+				<p><%= t.school %></p>
+			</div>
+		</section>
+		<% end %>
+	</div>
+</div>

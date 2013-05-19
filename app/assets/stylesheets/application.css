@@ -19,10 +19,32 @@ hr{
 /*Form*/
 
 @media all and (min-width: 768px){
-.btn-offset{
-	margin-left: 8px;
+.form-offset{
+	padding-left: 23px;
 }
 }
+
+@media all and (max-width: 767px) and (min-width: 501px){
+.form-offset{
+	padding-left: 0px !important;
+	padding-right: 0px !important;
+}
+
+}
+@media all and (max-width: 767px){
+	.input > .columns {
+		padding: 0 15px 0 15px !important;
+	}
+
+}
+
+
+@media all and (max-width: 500px){
+.form-offset{
+	padding-left: 15px ;
+	padding-right: 15px ;
+}
+
 
 .input > .columns {
 	padding-left: 0;

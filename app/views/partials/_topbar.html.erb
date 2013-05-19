@@ -1,33 +1,36 @@
 <nav class="top-bar">
-  <ul class="title-area">
-    <!-- Title Area -->
-    <li class="name">
-      <h1><%= link_to "IDA Dojo", root_path %></h1>
-    </li>
-    <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
-    <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
-  </ul>
+	<ul class="title-area">
+		<!-- Title Area -->
+		<li class="name">
+			<h1><%= link_to "IDA Dojo", root_path %></h1>
+		</li>
+		<!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
+		<li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+	</ul>
 
-  <section class="top-bar-section">
-    <!-- Left Nav Section -->
-    <ul class="left">
-      <li class="divider"></li>
-	  <%= nav_link "Home", root_path %>
-      <li class="divider"></li>
-      <%= nav_link "Contact", pages_contact_path %>
-      <li class="divider"></li>
-    </ul>
+	<section class="top-bar-section">
+		<!-- Left Nav Section -->
+		<ul class="left">
+			<li class="divider"></li>
+			<%= nav_link "Home", root_path %>
+			<li class="divider"></li>
+			<%= nav_link "Contact", pages_contact_path %>
+			<li class="divider"></li>
+			<%= nav_link "My Team", pages_myteam_path %>
+			<li class="divider"></li>
+		</ul>
 
-    <!-- Right Nav Section -->
-    <ul class="right">
-      <li class="divider"></li>
-		<% if user_signed_in? %>
-		  <%= nav_link "#{current_user.name.titleize}", edit_user_registration_path %>
-		  <li><%= link_to "Logout", destroy_user_session_path, method: :delete %></li>
-		<% else %>
-		  <%= nav_link "Sign up", new_user_registration_path %>
-		  <%= nav_link "Login", new_user_session_path %>	
-		<% end %>
-    </ul>
-  </section>
+		<!-- Right Nav Section -->
+		<ul class="right">
+			<% if user_signed_in? %>
+			<%= nav_link "#{current_user.name.titleize}", edit_user_registration_path %>
+			<li class="divider"></li>
+			<li><%= link_to "Logout", destroy_user_session_path, method: :delete %></li>
+			<% else %>
+			<%= nav_link "Sign up", new_user_registration_path %>
+			<li class="divider"></li>
+			<%= nav_link "Login", new_user_session_path %>	
+			<% end %>
+		</ul>
+	</section>
 </nav>

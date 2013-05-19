@@ -9,8 +9,6 @@ group :assets do
 
 end
 
-  gem 'zurb-foundation', '3.2.5'
-
 gem 'devise'
 
 gem 'simple_form'

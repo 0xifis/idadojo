@@ -10,4 +10,8 @@ class PagesController < ApplicationController
 
     @myteam = Team.find(current_user.team_id)
   end
+  
+  def checkpoints
+    @checkpoints = Checkpoint.all
+  end
 end

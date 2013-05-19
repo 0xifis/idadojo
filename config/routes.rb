@@ -8,6 +8,8 @@ Ninja::Application.routes.draw do
   get "pages/contact"
   
   get "pages/myteam"
+  
+  get "pages/checkpoints"
 
   devise_for :users
   ActiveAdmin.routes(self)

@@ -16,8 +16,12 @@
 			<li class="divider"></li>
 			<%= nav_link "Contact", pages_contact_path %>
 			<li class="divider"></li>
+			<% if user_signed_in? %>
 			<%= nav_link "My Team", pages_myteam_path %>
 			<li class="divider"></li>
+			<%= nav_link "Checkpoints", pages_checkpoints_path %>
+			<li class="divider"></li>
+			<% end %>
 		</ul>
 
 		<!-- Right Nav Section -->

@@ -1,0 +1,15 @@
+<h2 class="subheader">Checkpoints</h2>
+<hr />
+
+<% @checkpoints.each do|c| %>
+	
+	<%= c.name %>
+	
+<% end%>
+
+<% if @checkpoints.count == 0 %>
+
+<p>There are no checkpoints available.</p> 
+
+<% end %>
+	

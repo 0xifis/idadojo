@@ -1,2 +1,25 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<h2 class="subheader">Home</h2>
+<hr />
+
+<% @posts.each do |t| %>
+	<div class="panel <%= "callout" if t.important? %> hide-for-small">
+		<h5><%= t.title %></h5>
+		<p><%= t.body %></p>
+		<p><i><%= "Posted " + distance_of_time_in_words_to_now(t.created_at) + " ago" %></i></p>		
+	</div>
+<% end %>
+
+
+<div class="hide-for-medium-up">
+	<div class="section-container accordion" data-section="accordion">
+		<% @posts.each do|t| %>
+		<section>
+			<p class="title" data-section-title><a href="#"><%= t.title %></a></p>
+			<div class="content" data-section-content>
+				<p><%= t.body %></p>
+				<p><i><%= "Posted " + distance_of_time_in_words_to_now(t.created_at) + " ago" %></i></p>	
+			</div>
+		</section>
+		<% end %>
+	</div>
+</div>

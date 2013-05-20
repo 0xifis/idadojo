@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130519111518) do
+ActiveRecord::Schema.define(:version => 20130520140315) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.string   "resource_id",   :null => false
@@ -52,7 +52,6 @@ ActiveRecord::Schema.define(:version => 20130519111518) do
     t.string   "route"
     t.text     "task"
     t.integer  "points"
-    t.integer  "host_id"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
@@ -60,6 +59,14 @@ ActiveRecord::Schema.define(:version => 20130519111518) do
   create_table "checkpoints_teams", :id => false, :force => true do |t|
     t.integer "checkpoint_id"
     t.integer "team_id"
+  end
+
+  create_table "posts", :force => true do |t|
+    t.string   "title"
+    t.text     "body"
+    t.boolean  "important"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
   create_table "teams", :force => true do |t|

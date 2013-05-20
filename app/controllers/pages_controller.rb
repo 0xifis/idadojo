@@ -34,9 +34,9 @@ class PagesController < ApplicationController
       redirect_to root_path
     else
       t = current_user.team
-      t.checkpoint_ids << m.id
+      t.checkpoint_ids = t.checkpoint_ids.push(m.id)
       flash[:notice] = "That's a valid code! Well Done!"
-      redirect_to root_path
+      redirect_to pages_myteamprogress_path
     end
   end
   

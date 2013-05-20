@@ -9,10 +9,10 @@ Ninja::Application.routes.draw do
   match 'progress' => 'pages#myteamprogress', as: :pages_myteamprogress
   match 'leaderboard' => 'pages#leaderboard', as: :pages_leaderboard  
   
-  match '*code' => 'pages#checkcode'
+
 
   devise_for :users
   ActiveAdmin.routes(self)
-  
+    match '*code' => 'pages#checkcode'
 
 end

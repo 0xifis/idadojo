@@ -23,4 +23,12 @@ module ApplicationHelper
     width = teampoints*100/totalpoints
     return width
   end
+  
+  def team_points(t)
+    teampoints = 0;
+    t.checkpoints.each do |z|
+      teampoints += z.points
+    end
+    return teampoints
+  end
 end

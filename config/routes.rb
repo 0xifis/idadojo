@@ -6,8 +6,8 @@ Ninja::Application.routes.draw do
   match 'home' => 'pages#home', as: :pages_home
   match 'contact' => 'pages#contact', as: :pages_contact 
   match 'myteam' => 'pages#myteam', as: :pages_myteam
-  match 'progress' => 'pages#myteamprogress', as: :myteamprogress
-  match 'leaderboard' => 'pages#leaderboard', as: :leaderboard  
+  match 'progress' => 'pages#myteamprogress', as: :pages_myteamprogress
+  match 'leaderboard' => 'pages#leaderboard', as: :pages_leaderboard  
   
   match '*code' => 'pages#checkcode'
 

@@ -6,11 +6,11 @@ class PagesController < ApplicationController
 
   def contact
   end
-  
+
   def myteam
     @myteam = current_user.team
   end
-  
+
   def myteamprogress
     @myteam = current_user.team
     @totalpoints = 0;
@@ -23,24 +23,29 @@ class PagesController < ApplicationController
     end
     @width = @teampoints*100/@totalpoints
   end
-  
+
   def checkpoints
     @checkpoints = Checkpoint.all
   end
-  
+
   def checkcode
     m = Checkpoint.where("route = ?", params[:code]).first
     if m.nil?
-      flash[:notice] = "That's an invalid code. Are you trying to scam us?"
-      redirect_to root_path
+      flash[:error] = "That's an invalid code. Are you trying to scam us?"
+      redirect_to pages_myteamprogress_path
     else
       t = current_user.team
-      t.checkpoint_ids = t.checkpoint_ids.push(m.id)
-      flash[:notice] = "That's a valid code! Well Done!"
-      redirect_to pages_myteamprogress_path
+      if t.checkpoints.where("checkpoint_id = ?", m.id).present?
+        flash[:error] = "You have already submitted this code!"
+        redirect_to pages_myteamprogress_path
+      else
+        t.checkpoint_ids = t.checkpoint_ids.push(m.id)
+        flash[:success] = "That's a valid code! Well Done!"
+        redirect_to pages_myteamprogress_path
+      end
     end
   end
-  
+
   def leaderboard
   end
 end

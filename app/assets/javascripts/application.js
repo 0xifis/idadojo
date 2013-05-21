@@ -18,3 +18,6 @@
 
 $(document).foundation();
 
+$(document).ready(function () {
+    setTimeout( "$('.alert-box').fadeOut(500);",5000 );
+});

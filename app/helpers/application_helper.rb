@@ -6,11 +6,11 @@ module ApplicationHelper
       link_to link_text, link_path
     end
   end
-  
+
   def title(page_title)
     content_for(:title) { page_title }
   end
-  
+
   def progress_width(t)
     totalpoints = 0;
     Checkpoint.all.each do |m|
@@ -23,12 +23,22 @@ module ApplicationHelper
     width = teampoints*100/totalpoints
     return width
   end
-  
+
   def team_points(t)
     teampoints = 0;
     t.checkpoints.each do |z|
       teampoints += z.points
     end
     return teampoints
+  end
+
+
+  def flash_class(level)
+    case level
+    when :notice then "alert-box"
+    when :success then "alert-box success"
+    when :error then "alert-box alert"
+    when :alert then "alert-box alert"
+    end
   end
 end

@@ -121,6 +121,7 @@
           position : 'absolute',
           width: '95%',
           left: '2.5%',
+          z-inde: 100000,
           'max-width': 'none',
           top: position.top + this.outerHeight(target)
         });

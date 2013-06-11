@@ -15,18 +15,3 @@
 	</div>
 	</div>
 <% end %>
-
-<% Team.all.each do |t| %>
-	<div>
-	<div class="teamprogress">
-		<div class="row"><p class="small-12 columns"><%= t.name + " (" + team_points(t).to_s + ")"%></p></div>
-		<div class="row">
-			<div class="large-12 columns">
-				<div class="progress progress-striped active">
-				  <div class="bar" style="width: <%= progress_width(t) %>%;"></div>
-				</div>
-			</div>
-		</div>
-	</div>
-	</div>
-<% end %>

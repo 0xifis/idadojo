@@ -1,7 +1,7 @@
 <h2 class="subheader">Home</h2>
 <hr />
 
-<% @posts.each do |t| %>
+<% @posts.reverse.each do |t| %>
 	<div class="panel <%= "callout" if t.important? %> hide-for-small">
 		<h5><%= t.title %></h5>
 		<p><%= t.body %></p>

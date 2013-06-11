@@ -1,7 +1,7 @@
 class PagesController < ApplicationController
   before_filter :authenticate_user!, except: [:home, :contact]
   def home
-    @posts = Post.order("created_at DESC").all
+    @posts = Post.order("created_at ASC").all
   end
 
   def contact
